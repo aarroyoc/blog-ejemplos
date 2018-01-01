@@ -1,0 +1,8 @@
+[package]
+name = "gtk_dice"
+version = "0.1.0"
+authors = ["Adrián Arroyo Calle <adrian.arroyocalle@gmail.com>"]
+
+[dependencies]
+gtk = "*"
+rand = "*"
