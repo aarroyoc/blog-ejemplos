@@ -12,6 +12,7 @@ use futures::Stream;
 use tokio_io::codec::*;
 use std::rc::Rc;
 use std::cell::RefCell;
+use tokio::prelude::*;
 
 fn suma(a: i32, b: i32) -> SumFuture {
     SumFuture{
@@ -92,13 +93,11 @@ fn main() {
         .map_err(|err|{
             println!("error");
         });
-        tokio::executor::current_thread::spawn(action);
+        tokio::spawn(action);
         
         Ok(())
     }).map_err(|err|{
         println!("error = {:?}",err);
     });
-    tokio::executor::current_thread::run(|_|{
-        tokio::executor::current_thread::spawn(server);
-    });
+    tokio::run(server);
 }
