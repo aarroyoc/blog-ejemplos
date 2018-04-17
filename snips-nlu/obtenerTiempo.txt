@@ -1,0 +1,3 @@
+¿Qué tiempo hará [cuando:snips/time](mañana) en [donde:localidad](Molina de Aragón)?
+¿Qué tal hará [cuando:snips/time](pasado mañana) en [donde:localidad](Ponferrada)?
+¿Qué temperatura habrá [cuando:snips/time](mañana) en [donde:localidad](Frías)? 

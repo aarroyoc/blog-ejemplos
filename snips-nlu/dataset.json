@@ -1,0 +1,176 @@
+{
+  "language": "es",
+  "intents": {
+    "obtenerTiempo": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u00bfQu\u00e9 tiempo har\u00e1 "
+            },
+            {
+              "slot_name": "cuando",
+              "entity": "snips/time",
+              "text": "ma\u00f1ana"
+            },
+            {
+              "text": " en "
+            },
+            {
+              "slot_name": "donde",
+              "entity": "localidad",
+              "text": "Molina de Arag\u00f3n"
+            },
+            {
+              "text": "?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u00bfQu\u00e9 tal har\u00e1 "
+            },
+            {
+              "slot_name": "cuando",
+              "entity": "snips/time",
+              "text": "pasado ma\u00f1ana"
+            },
+            {
+              "text": " en "
+            },
+            {
+              "slot_name": "donde",
+              "entity": "localidad",
+              "text": "Ponferrada"
+            },
+            {
+              "text": "?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u00bfQu\u00e9 temperatura habr\u00e1 "
+            },
+            {
+              "slot_name": "cuando",
+              "entity": "snips/time",
+              "text": "ma\u00f1ana"
+            },
+            {
+              "text": " en "
+            },
+            {
+              "slot_name": "donde",
+              "entity": "localidad",
+              "text": "Fr\u00edas"
+            },
+            {
+              "text": "?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": {
+    "localidad": {
+      "automatically_extensible": true,
+      "use_synonyms": true,
+      "data": [
+        {
+          "value": "Burgos",
+          "synonyms": []
+        },
+        {
+          "value": "Valladolid",
+          "synonyms": []
+        },
+        {
+          "value": "Pe\u00f1aranda de Bracamonte",
+          "synonyms": []
+        },
+        {
+          "value": "Soria",
+          "synonyms": []
+        },
+        {
+          "value": "Almaz\u00e1n",
+          "synonyms": []
+        },
+        {
+          "value": "\u00cdscar",
+          "synonyms": []
+        },
+        {
+          "value": "Portillo",
+          "synonyms": []
+        },
+        {
+          "value": "Toro",
+          "synonyms": []
+        },
+        {
+          "value": "Fermoselle",
+          "synonyms": []
+        },
+        {
+          "value": "Sahag\u00fan",
+          "synonyms": []
+        },
+        {
+          "value": "Herv\u00e1s",
+          "synonyms": []
+        },
+        {
+          "value": "O\u00f1a",
+          "synonyms": []
+        },
+        {
+          "value": "Salda\u00f1a",
+          "synonyms": []
+        },
+        {
+          "value": "Sabi\u00f1\u00e1nigo",
+          "synonyms": []
+        },
+        {
+          "value": "Jaca",
+          "synonyms": []
+        },
+        {
+          "value": "Molina de Arag\u00f3n",
+          "synonyms": []
+        },
+        {
+          "value": "Ponferrada",
+          "synonyms": []
+        },
+        {
+          "value": "Fr\u00edas",
+          "synonyms": []
+        }
+      ]
+    },
+    "snips/time": {
+      "automatically_extensible": true,
+      "use_synonyms": true,
+      "data": [
+        {
+          "value": "ma\u00f1ana",
+          "synonyms": []
+        },
+        {
+          "value": "pasado ma\u00f1ana",
+          "synonyms": []
+        },
+        {
+          "value": "ma\u00f1ana",
+          "synonyms": []
+        }
+      ]
+    }
+  }
+}
