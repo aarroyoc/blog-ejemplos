@@ -1,0 +1,9 @@
+[package]
+name = "sqlite-bindgen"
+version = "0.1.0"
+authors = ["Adrián Arroyo Calle <adrian.arroyocalle@gmail.com>"]
+
+[build-dependencies]
+bindgen = "0.26.3"
+
+[dependencies]
