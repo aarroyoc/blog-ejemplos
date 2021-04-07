@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Search Facebook Leak</title>
+        <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: auto;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Facebook Data Leak Search</h1>
+        <form method="GET" action="/search">
+            <label>Nombre: </label>
+            <input type="text" name="name"/>
+            <label>Apellidos: </label>
+            <input type="text" name="surname"/>
+            <input type="submit" value="Buscar"/>
+        </form>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Número teléfono</th>
+                <th>Localización</th>
+            </tr>
+            {% for hit in hits %}
+            <tr>
+                <td>{{ hit["_source"]["name"] }}</td>
+                <td>{{ hit["_source"]["surname"] }}</td>
+                <td>+{{ hit["_source"]["phone_number"] }}</td>
+                <td>{{ hit["_source"]["location1"] }} / {{ hit["_source"]["location2"] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>

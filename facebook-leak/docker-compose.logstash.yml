@@ -1,0 +1,9 @@
+version: "3.6"
+services:
+  logstash:
+    image: logstash:7.12.0
+    command: logstash -f /config/logstash-fb-spain.conf
+    volumes:
+    - ./:/config
+    depends_on:
+    - elasticsearch
