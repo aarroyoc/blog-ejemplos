@@ -1,0 +1,21 @@
+[[package]]
+name = "z3-solver"
+version = "4.8.14.0"
+description = "an efficient SMT solver library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "e81934656819ced70cf36ad4071411a0a93fd053f129bcf7ef79806102a8e794"
+
+[metadata.files]
+z3-solver = [
+    {file = "z3-solver-4.8.14.0.tar.gz", hash = "sha256:ded46ac020e319c03bb597433f451679294ae7adba0151b170fed0d4d973abbe"},
+    {file = "z3_solver-4.8.14.0-py2.py3-none-macosx_10_16_x86_64.whl", hash = "sha256:042773b85b6fc8e5144f4c8ad7d23f1461086fcfdaf0029bc55f1f7d12ae9617"},
+    {file = "z3_solver-4.8.14.0-py2.py3-none-manylinux1_x86_64.whl", hash = "sha256:363f16be972b7b4e498d837840e26165639c180c4b77a9f8c6b1ba90a338cce2"},
+    {file = "z3_solver-4.8.14.0-py2.py3-none-win32.whl", hash = "sha256:f22e306e694d3bd749f17f9518c7c38013c89c89800ace31f9c412d0b1fd30c7"},
+    {file = "z3_solver-4.8.14.0-py2.py3-none-win_amd64.whl", hash = "sha256:48f59fad7ed63b172c51ed74137307898a6b7dbc8a5074c0653f4914fe1ebe5f"},
+]

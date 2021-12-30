@@ -1,0 +1,5 @@
+(declare-const p Bool)
+(declare-const q Bool)
+(assert p)
+(check-sat)
+(get-model)
