@@ -63,9 +63,9 @@ h_value(S, H) :-
 
 distance(_, void, 0) :- !.
 distance(Ls, E, D) :-
-    nth(N, Ls, E),
-    X0 is (N-1) // 4,
-    Y0 is (N-1) mod 4,
+    nth0(N, Ls, E),
+    X0 is N // 4,
+    Y0 is N mod 4,
     X1 is (E-1) // 4,
     Y1 is (E-1) mod 4,
     D is abs(X1-X0)+abs(Y1-Y0).
