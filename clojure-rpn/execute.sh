@@ -1,0 +1,1 @@
+clj -X main/run
