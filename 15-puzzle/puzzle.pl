@@ -1,6 +1,6 @@
-%% :- use_module(library(lists)).
-%% :- use_module(library(format)).
-%% :- use_module(library(pio)).
+:- use_module(library(lists)).
+:- use_module(library(format)).
+:- use_module(library(pio)).
 
 easy_state(table(void,1,2,3,5,6,7,4,9,10,11,8,13,14,15,12)).
 medium_state(table(13,9,5,4,15,6,1,8,void,10,2,11,14,3,7,12)).
