@@ -46,7 +46,7 @@ solve([_-state(S0,H,_)|_], _, H) :-
 solve([_-state(S0, H0, N0)|States], Visited, H) :-
     findall(F-state(S, [M|H0], N), (
 		move(M, S0, S),
-		\+ member(S, States),
+		\+ member(_-state(S, _, _), States),
 		\+ member(S, Visited),
 		h_value(S, HVal),
 		N is N0+1,
