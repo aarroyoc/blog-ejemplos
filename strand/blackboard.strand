@@ -1,0 +1,24 @@
+-initialization(main).
+
+main :-
+    writer(10, S1),
+    writer(20, S2),
+    reader(1, S3),
+    reader(2, S4),
+    merger([merge(S1), merge(S2), merge(S3), merge(S4)], M),
+    manager(M).
+
+writer(N, S) :-
+    S := [write(N)|S1],
+    writer(N, S1).
+
+reader(N, S) :-
+    S := [read(List)|S1],
+    fmt:format("Reader: ~d\tList: ~q\n", [N, List]),
+    reader(N, S1).
+
+manager(M) :- manager(M, []).
+
+manager([read(BB)|M], L) :- BB := L, manager(M, L).
+manager([write(E)|M], L) :- manager(M, [E|L]).
+manager([], _).

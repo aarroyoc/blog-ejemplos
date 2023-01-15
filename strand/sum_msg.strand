@@ -1,0 +1,25 @@
+-initialization(main).
+
+produce(N, Vals) :-
+    N > 0 |
+    Vals := [{5, CurrentSum}|Vals1],
+    N1 is N - 1,
+    fmt:format("Current Sum: ~d\n", [CurrentSum]),
+    produce(N1, Vals1).
+    
+produce(0, Vals) :- Vals := [].
+
+consumer(Vals, Sum) :-
+    consumer_(Vals, 0, Sum).
+
+consumer_([{Val, CurrentSum}|Vals], Sum0, Sum) :-
+    Sum1 is Sum0 + Val,
+    CurrentSum := Sum1,
+    consumer_(Vals, Sum1, Sum).
+consumer_([], Sum0, Sum) :-
+    Sum0 := Sum.
+
+main :-
+    produce(10, Vals),
+    consumer(Vals, Sum),
+    fmt:format("Suma: ~q\n", [Sum]).

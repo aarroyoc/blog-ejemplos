@@ -1,0 +1,17 @@
+-initialization(main).
+
+max(X, Y, Z) :- X > Y | Z := X.
+max(X, Y, Z) :- X =< Y | Z := Y.
+
+area(square, D, V) :- V is D * D.
+area(circle, D, V) :- V is 3.1416 * D * D.
+area(T, _, V) :- T =\= square, T =\= circle | V := 0.
+
+largest(O1, D1, O2, D2, A) :-
+    area(O1, D1, A1),
+    area(O2, D2, A2),
+    max(A1, A2, A).
+
+main :-
+    largest(square, 50, circle, 30, A),
+    writeln(A).
